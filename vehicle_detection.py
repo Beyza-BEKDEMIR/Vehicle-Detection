@@ -65,6 +65,8 @@ for image_path in image_paths:
             cv2.putText(img, f"{label} {confidence:.2f}", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
     cv2.imshow("YOLO Output", img)
-    cv2.waitKey(0)
+    # Herhangi bir tuşa basıldığında döngüyü sonlandır
+    if cv2.waitKey(1) & 0xFF != 255:
+        break
 
 cv2.destroyAllWindows()
