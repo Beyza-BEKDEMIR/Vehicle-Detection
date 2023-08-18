@@ -272,16 +272,9 @@ y_test_indices = np.array([class_names.index(label) for label in y_test])
 x_test = np.array(x_test)
 y_test = np.array(y_test)
 
-# Modeli kullanarak sınıflandırma sonuçlarını alın
 predictions = model.predict(x_test)
-
-# Her bir tahmin için en yüksek olasılığa sahip sınıfı seçin
 predicted_indices = np.argmax(predictions, axis=1)
-
-# Tahmin edilen sınıfları sınıf adlarına dönüştürün
 predicted_labels = [class_indices_to_names[index] for index in predicted_indices]
-
-# Gerçek sınıf etiketlerini sınıf adlarına dönüştürün
 true_labels = [class_indices_to_names[index] for index in y_test_indices]
 
 # Doğruluk değerlendirmesi
