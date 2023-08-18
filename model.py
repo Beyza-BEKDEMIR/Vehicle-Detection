@@ -287,18 +287,3 @@ true_labels = [class_indices_to_names[index] for index in y_test_indices]
 # Doğruluk değerlendirmesi
 accuracy = np.mean(np.array(predicted_labels) == np.array(true_labels))
 print("Test accuracy:", accuracy)
-
-"""# Model performansını değerlendirme
-test_loss, test_acc = model.evaluate(x_test, y_test)
-print("Test accuracy:", test_acc)"""
-
-
-# Eğitilmiş modeli kullanarak araç tanıma yapın
-# ... (Eğitilmiş YOLO modelini kullanarak araçları algılama)
-# Modeli eğitirken sınıf indeksleri ile çalışmak için etiket dizilerini düzeltin
-
-#y_validation_indices = np.array([class_names.index(label) for label in y_validation])
-
-
-# Modeli eğitirken y_validation_indices veri tipini numpy.ndarray olarak dönüştürün
-#y_validation_indices = np.array(y_validation_indices)
