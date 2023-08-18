@@ -6,8 +6,6 @@ import tensorflow as tf
 from keras import layers, models
 from keras.layers import Conv2D, MaxPooling2D, Flatten
 from sklearn.preprocessing import LabelEncoder
-#from object_detection.utils import config_util
-#from object_detection.builders import model_builder
 
 # Zip dosyasının yolu
 file_path = 'C:\\Users\\şehitler ölmez\\Desktop\\Vehicle Detection\\dataset-vehicles.zip'
